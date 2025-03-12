@@ -621,8 +621,16 @@ body {
     padding: 0 16px;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    /* gap: 10px; */
+    justify-content: space-between;
     margin-top: 10px;
+    row-gap: 10px;
+}
+
+.goods-cards .goods-card {
+    flex: 1 1 calc(50% - 5px);
+    /* Две карточки в ряд, учитывая отступ */
+    max-width: calc(50% - 5px);
 }
 
 .goods-card {
@@ -638,6 +646,13 @@ body {
     text-align: center;
     margin-top: 24px;
 }
+
+.goods-img img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
 
 
 /* .goods-card {
@@ -657,6 +672,28 @@ body {
 
 .goods-info-presence {
     color: #129A1B;
+    font-size: 12px;
+    font-weight: 500;
+    display: block;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    padding-left: 12px;
+}
+
+
+.goods-info-presence-y {
+    color: #FAC102;
+    font-size: 12px;
+    font-weight: 500;
+    display: block;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    padding-left: 12px;
+}
+
+
+.goods-info-presence-r {
+    color: #F24236;
     font-size: 12px;
     font-weight: 500;
     display: block;
@@ -692,37 +729,460 @@ body {
     margin-top: 8px;
 }
 
-.goods-media{
+.goods-media {
     margin-top: 8px;
     color: #344054;
     font-weight: 500;
 }
 
-.goods-loc{
+.goods-loc {
     margin-top: 6px;
     color: #667085;
     font-size: 12px;
 }
 
 
+.goods-card {
+    position: relative;
+}
+
+
+.goods-heart-btn {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 8px;
+}
+
+.goods-discount {
+    position: absolute;
+    top: 7px;
+    left: 0px;
+    max-width: 42px;
+    width: 100%;
+    background-color: #F24236;
+    min-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 5px 5px 0px;
+}
+
+.goods-discount span {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    display: block;
+    margin-left: 5px;
+}
+
+
+.categories {
+    margin-bottom: 80px;
+}
+
+.categories-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    margin-top: 24px;
+}
+
+.categories-title-sub {
+    color: #344054;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.categoriesAll {
+    display: flex;
+    padding-left: 16px;
+    gap: 10px;
+    overflow-y: scroll;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: thin;
+
+}
+
+.mt-1 {
+    margin-top: 10px;
+}
+
+.categoriesAll button {
+    font-size: 15px;
+    color: #344054;
+    font-weight: 500;
+    padding: 8px 12px;
+    white-space: nowrap;
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+
+}
+
+
+body.locked {
+    overflow: hidden;
+    /* Блокирует скролл на странице */
+}
+
+/* Затемнённый фон */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    /* Полупрозрачный фон */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 9999;
+}
+
+/* Показываем фон при открытии */
+.overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Drawer */
+.drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    max-width: 312px;
+    width: 100%;
+    min-height: 100vh;
+    background: #FFF;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    overflow-y: auto;
+    z-index: 99999;
+}
+
+/* Показываем drawer */
+.drawer.open {
+    right: 0;
+}
+
+/* Кнопка закрытия */
+.close-drawer {
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 6px;
+    /* position: absolute;
+    top: 10px;
+    right: 10px; */
+}
+
+.drawer-head {
+    background: #F5F6F8;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    justify-content: space-between;
+}
+
+.drawer-title {
+    color: #344054;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.drawer-code {
+    color: #344054;
+    font-family: Gilroy;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.drawer-text {
+    margin-top: 24px;
+    padding: 0 16px;
+}
+
+.drawer-text__info {
+    color: #667085;
+    font-size: 12px;
+    font-weight: 500;
+    max-width: 280px;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.input-group {
+    margin-top: 24px;
+}
+
+
+.input-group-code {
+    color: #344054;
+    font-family: Gilroy;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+
+.input-field {
+    max-width: 280px;
+    width: 100%;
+    min-height: 44px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #D0D5DD;
+}
+
+
+.input-take {
+    color: #667085;
+    font-weight: 500;
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+.input-take span {
+    color: #F24236;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.input-group__btn {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.primary-btn {
+    border-radius: 8px;
+    background: #F24236;
+    border: none;
+    min-height: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.secondary-btn {
+    min-height: 40px;
+    border-radius: 8px;
+    background: #F5F6F8;
+    border: none;
+    color: #344054;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+
+
+
+
+/* Стили для второго Drawer */
+.drawer-two {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    max-width: 312px;
+    width: 100%;
+    min-height: 100vh;
+    background: #FFF;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    /* padding: 16px; */
+    overflow-y: auto;
+    z-index: 99999;
+}
+
+/* Показываем второй drawer */
+.drawer-two.open {
+    right: 0;
+}
+
+/* Кнопка закрытия для второго drawer */
+.close-drawer-two {
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 6px;
+    /* position: absolute;
+    top: 10px;
+    right: 10px; */
+}
+
+/* Второй затемнённый фон */
+.overlay-two {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 9999;
+}
+
+/* Показываем фон при открытии второго drawer */
+.overlay-two.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.e-bit {
+    border-radius: 8px;
+    background: #F5F6F8;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+}
+
+.p-3 {
+    padding: 0 16px;
+}
+
+.e-bit-info {
+    color: #344054;
+    font-family: Gilroy;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+
+.e-bit-info-text {
+    color: #667085;
+    font-size: 12px;
+    font-weight: 500;
+    max-width: 181px;
+    width: 100%;
+    margin-top: 6px;
+}
+
+
+.check {
+    border-radius: 8px;
+    background: #F5F6F8;
+    padding: 12px;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.check-text {
+    text-align: center;
+    color: #667085;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+
+.check-number {
+    color: #344054;
+
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 40px;
+    border-bottom: 1px solid #E8EAED;
+    padding-left: 12px;
+    padding-right: 16px;
+}
+
+.list-comp {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.mt-24 {
+    margin-top: 24px;
+    border-radius: 8px;
+    border: 0.6px solid var(--Light-Theme-Elements-Border-1, #E8EAED);
+    /* padding: 10px 16px 10px 12px; */
+}
+
+
+
+
+.list p {
+    text-align: right;
+    color: #344054;
+    text-align: right;
+    font-family: Gilroy;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px;
+    max-width: 143px;
+    width: 100%;
+}
+
+
+.list-comp span {
+    color: var(#344054);
+    font-family: Gilroy;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px;
+}
+
+
+.list a {
+    color: #F24236;
+    font-family: Gilroy;
+font-size: 12px;
+
+}
+
 
 @media (max-width: 1024px) {
     .swiper-slide {
         width: 33.33%;
-        /* 3 слайда на экране */
+
     }
 }
 
 @media (max-width: 768px) {
     .swiper-slide {
         width: 50%;
-        /* 2 слайда на экране */
+
     }
 }
 
 @media (max-width: 480px) {
     .swiper-slide {
         width: 100%;
-        /* 1 слайд на экране */
+
     }
 }
