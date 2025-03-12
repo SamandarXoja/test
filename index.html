@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav">
+            <div class="nav__head">
+                <img src="./icons/button-nav.svg" alt="">
+                <div class="nav-search">
+                    <img src="./icons/search.svg" alt="">
+                    <input type="text" placeholder="Искать на Glotr">
+                </div>
+            </div>
+            <div class="nav-details">
+                <ul class="nav__info">
+                    <li class="nav__info-text">
+                        <span class="nav__info-title-1">Главная</span>
+                        <img class="nav__arrow" src="./icons/arrowright.svg" alt="">
+                    </li>
+                    <li class="nav__info-text">
+                        <span class="nav__info-title">Товары</span>
+                        <img class="nav__arrow" src="./icons/arrowright.svg" alt="">
+                    </li>
+                    <li class="nav__info-text">
+                        <span class="nav__info-title active">Красота и здоровье</span>
+
+                    </li>
+                </ul>
+
+                <ul class="nav-categories">
+                    <li class="nav-categories__text-1"><a href="#">Описание</a></li>
+                    <li class="nav-categories__text active"><a href="#">Характеристика</a></li>
+                    <li class="nav-categories__text"><a href="#">Продавец</a></li>
+                    <li class="nav-categories__text"><a href="#">Отзывы</a></li>
+                </ul>
+
+
+
+            </div>
+
+        </nav>
+
+        <div class="pm">
+            <div class="header-carusel">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- Слайды -->
+                        <div class="swiper-slide">
+                            <img src="./images/Rectangle.png" alt="Слайд 1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/Rectangle.png" alt="Слайд 1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/Rectangle.png" alt="Слайд 1">
+                        </div>
+                    </div>
+
+                    <!-- Элементы навигации (если нужно) -->
+
+                    <div class="swiper-pagination"></div>
+                    <button class="heart-btn">
+                        <img src="./icons/heart.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <section class="product-empty">
+            <h2 class="product-empty__title">Apple Macbook air, M1, 512 SSD gb,
+                32gb RAM</h2>
+            <div class="flex">
+                <div class="product-empty-info">
+                    <span class="product-empty-d">Нет в наличии</span>
+                </div>
+
+                <span class="product-cod">Код 32453</span>
+            </div>
+            <b class="product-empty__price">12 850 000 <span class="price-sum">сум</span><span
+                    class="price-sum">/шт</span></b>
+
+
+
+
+            <div class="buttons">
+                <button class="product-empty-btn">Уточнить наличие</button>
+                <button class="product-empty-chat"><img src="./icons/chat-2.svg" alt=""></button>
+            </div>
+
+
+        </section>
+
+        <section class="product">
+            <h3 class="product-title">Описание</h3>
+            <p class="product-text">
+                Оптический привод
+                С новой силой. С появлением чипа Apple M1 наш самый тонкий и лёгкий ноутбук полностью преобразился.
+                Центральный процессор теперь работает до 3,5 раза быстрее. Графический — до 5 раз. А благодаря нашей
+                передовой системе Neural Engine скорость машинного обучения возросла до 9 раз. Новый Mac. Book Air
+                работает без подзарядки дольше, чем предыдущие модели. </p>
+
+
+            <div class="product-show">
+                <a href="#" class="product-show-title">Показать все</a>
+                <img src="./icons/chevron-up.svg" alt="">
+            </div>
+
+
+
+        </section>
+        <section class="productInfo pb-1">
+            <h3 class="productInfo-title">Характеристики</h3>
+            <table class="productInfo__table">
+                <tr class="productInfo-d">
+                    <td>Код товара</td>
+                    <td>MGN93RU/A </td>
+                </tr>
+                <tr class="productInfo-d">
+                    <td>Производитель</td>
+                    <td>Apple</td>
+                </tr>
+                <tr class="productInfo-d">
+                    <td>Разрешение экрана </td>
+                    <td>2560x1600</td>
+                </tr>
+                <tr class="productInfo-d">
+                    <td>Количество ядер процессора </td>
+                    <td>8</td>
+                </tr>
+                <tr class="productInfo-d">
+                    <td>Оптический привод
+                    </td>
+                    <td>Отсутствует</td>
+                </tr>
+
+
+
+            </table>
+
+            <div class="product-show ml">
+                <a href="#" class="product-show-title">Показать все</a>
+                <img src="./icons/chevron-up.svg" alt="">
+            </div>
+        </section>
+        <section class="pay-section">
+            <h3 class="pay-section-title">Способы оплаты</h3>
+            <ul class="pay-list">
+                <li><a href="#">- Наличными</a></li>
+                <li><a href="#">- Перечислением</a></li>
+                <li><a href="#">- Наличными</a></li>
+                <li><a href="#">- Терминал UzCard</a></li>
+                <li><a href="#">- Терминал HUMO</a></li>
+                <li><a href="#">- POS терминал</a></li>
+                <li><a href="#">- Рayme</a></li>
+            </ul>
+            <div class="product-show ">
+                <a href="#" class="product-show-title">Подробно</a>
+                <img src="./icons/chevron-up.svg" alt="">
+            </div>
+        </section>
+        <section class="pay-section">
+            <h3 class="pay-section-title">Способы доставки</h3>
+            <ul class="pay-list">
+                <li><a href="#">- Доставка куръером</a></li>
+                <li><a href="#">- Доставка почтой</a></li>
+
+            </ul>
+            <div class="product-show ">
+                <a href="#" class="product-show-title">Подробно</a>
+                <img src="./icons/chevron-up.svg" alt="">
+            </div>
+        </section>
+        <section class="sels">
+            <div class="seller-title">
+                <h3 class="seller-title-sub">
+                    Продавец
+                </h3>
+                <a href="#" class="sels-link">Перейти на сайт</a>
+            </div>
+            <div class="selsmen">
+                <div class="amazon">
+                    <img src="./icons/amazon.svg" alt="">
+                </div>
+                <div>
+                    <p class="sals-name">Amazon</p>
+                    <p class="sals-location">г. Ташкент, Узбекистан</p>
+                </div>
+
+            </div>
+            <div class="sels-time">
+                <img src="./icons/clock.svg" alt="">
+                <p class="sels-time-now">Сегодня работает до 18:00 </p>
+                <span class="sels-time-now-d">Весь график</span>
+            </div>
+
+            <div class="sels-number">
+                <img src="./icons/phone-call.svg" alt="">
+                <p class="sels-number-mobile">+998 99 </p>
+                <span class="sels-number-mobile">...</span>
+                <span class="sels-time-now-d">показать номер</span>
+            </div>
+
+            <div class="sels-email">
+                <img src="./icons/globe.svg" alt="">
+                <p class="sels-email-name">amazon.com</p>
+            </div>
+            <div class="sels-buttons">
+                <button class="sels-btn btn-color">Все товары продавца</button>
+                <button class="sels-btn btn-colors">Заказать звонок</button>
+            </div>
+
+
+        </section>
+
+        <section class="goods">
+            <div class="goods-title">
+                <h2 class="goods-title-sub">Похожие товары продавца</h2>
+                <img src="./icons/arrowright.svg" alt="">
+            </div>
+
+            <div class="goods-cards">
+                <div class="goods-card">
+                    <img src="./images/" alt="">
+                </div>
+             
+
+
+            </div>
+
+
+
+        </section>
+
+
+    </main>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./main.js"></script>
+
+</body>
+
+</html>
