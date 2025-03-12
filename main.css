@@ -634,6 +634,77 @@ body {
 }
 
 
+.goods-img {
+    text-align: center;
+    margin-top: 24px;
+}
+
+
+/* .goods-card {
+    padding: 0 12px;
+} */
+
+.goods-info {
+    margin-top: 35px;
+}
+
+.goods-info-text {
+    color: #344054;
+    font-size: 13px;
+    font-weight: 500;
+    padding-left: 12px;
+}
+
+.goods-info-presence {
+    color: #129A1B;
+    font-size: 12px;
+    font-weight: 500;
+    display: block;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    padding-left: 12px;
+}
+
+
+.goods-price {
+    color: #F24236;
+    font-weight: 700;
+    font-size: 16px;
+    padding-left: 12px;
+}
+
+.goods-sum {
+    color: #F24236;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+
+.goods-media {
+    color: #344054;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.goods-m {
+    border-top: 1px solid #e2e2e2;
+    padding-left: 12px;
+    margin-top: 8px;
+}
+
+.goods-media{
+    margin-top: 8px;
+    color: #344054;
+    font-weight: 500;
+}
+
+.goods-loc{
+    margin-top: 6px;
+    color: #667085;
+    font-size: 12px;
+}
+
+
 
 @media (max-width: 1024px) {
     .swiper-slide {
