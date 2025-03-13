@@ -1,3 +1,5 @@
+@import './font.css';
+
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +19,7 @@ a {
 
 body {
     background: #F5F6F8;
+    font-family: 'Montserrat';
 }
 
 
@@ -87,6 +90,8 @@ body {
 .nav__info-title {
     margin-left: 10px;
     color: #667085;
+    white-space: nowrap;
+    font-size: 14px;
 }
 
 .nav__info-title.active {
@@ -95,6 +100,7 @@ body {
 
 .nav__info-title-1 {
     color: #667085;
+    font-size: 14px;
 }
 
 
@@ -143,7 +149,7 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    /* Прячем излишки */
+  
 }
 
 .swiper-wrapper {
@@ -161,7 +167,7 @@ body {
     /* width: 100px; */
     height: auto;
     object-fit: cover;
-    /* Изображение не выходит за пределы слайда */
+    
 }
 
 /* Пагинация */
@@ -394,12 +400,12 @@ body {
 
 .productInfo__table tr:nth-child(even) {
     background: #ffffff;
-    /* Фон для четных строк */
+   
 }
 
 .productInfo__table tr:nth-child(odd) {
     background: #F6F8F9;
-    /* Фон для нечетных строк */
+   
 }
 
 .productInfo-title {
@@ -629,7 +635,7 @@ body {
 
 .goods-cards .goods-card {
     flex: 1 1 calc(50% - 5px);
-    /* Две карточки в ряд, учитывая отступ */
+   
     max-width: calc(50% - 5px);
 }
 
@@ -826,10 +832,10 @@ body {
 
 body.locked {
     overflow: hidden;
-    /* Блокирует скролл на странице */
+ 
 }
 
-/* Затемнённый фон */
+
 .overlay {
     position: fixed;
     top: 0;
@@ -837,14 +843,14 @@ body.locked {
     width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.4);
-    /* Полупрозрачный фон */
+
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out;
     z-index: 9999;
 }
 
-/* Показываем фон при открытии */
+
 .overlay.open {
     opacity: 1;
     visibility: visible;
@@ -899,7 +905,7 @@ body.locked {
 
 .drawer-code {
     color: #344054;
-    font-family: Gilroy;
+    /* font-family: Gilroy; */
     font-size: 14px;
     font-weight: 700;
 }
@@ -926,7 +932,7 @@ body.locked {
 
 .input-group-code {
     color: #344054;
-    font-family: Gilroy;
+    /* font-family: Gilroy; */
     font-size: 12px;
     font-weight: 600;
     margin-bottom: 8px;
@@ -988,7 +994,7 @@ body.locked {
 
 
 
-/* Стили для второго Drawer */
+
 .drawer-two {
     position: fixed;
     top: 0;
@@ -1004,12 +1010,12 @@ body.locked {
     z-index: 99999;
 }
 
-/* Показываем второй drawer */
+
 .drawer-two.open {
     right: 0;
 }
 
-/* Кнопка закрытия для второго drawer */
+
 .close-drawer-two {
     border: none;
     background: none;
@@ -1021,7 +1027,7 @@ body.locked {
     right: 10px; */
 }
 
-/* Второй затемнённый фон */
+
 .overlay-two {
     position: fixed;
     top: 0;
@@ -1035,7 +1041,7 @@ body.locked {
     z-index: 9999;
 }
 
-/* Показываем фон при открытии второго drawer */
+
 .overlay-two.open {
     opacity: 1;
     visibility: visible;
@@ -1058,7 +1064,7 @@ body.locked {
 
 .e-bit-info {
     color: #344054;
-    font-family: Gilroy;
+    /* font-family: Gilroy; */
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -1100,7 +1106,7 @@ body.locked {
     color: #344054;
 
     text-align: center;
-    font-family: Gilroy;
+    /* font-family: Gilroy; */
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -1138,7 +1144,7 @@ body.locked {
     text-align: right;
     color: #344054;
     text-align: right;
-    font-family: Gilroy;
+    /* font-family: Gilroy; */
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -1149,8 +1155,8 @@ body.locked {
 
 
 .list-comp span {
-    color: var(#344054);
-    font-family: Gilroy;
+    color: #344054;
+    /* font-family: Gilroy; */
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -1160,9 +1166,40 @@ body.locked {
 
 .list a {
     color: #F24236;
-    font-family: Gilroy;
-font-size: 12px;
+    /* font-family: Gilroy; */
+    font-size: 12px;
 
+}
+
+.list-comp2 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.list-comp2 span {
+    color: #344054 !important;
+    display: block;
+    width: 120px;
+}
+
+
+.list-h {
+    min-height: 56px !important;
+}
+
+.btn-check {
+    border-radius: 8px;
+    background: #F24236;
+    border: none;
+    max-width: 280px;
+    width: 100%;
+    min-height: 40px;
+    font-weight: 600;
+    color: #fff;
+    /* font-family: Gilroy; */
+    font-size: 14px;
+    margin-top: 24px;
 }
 
 
